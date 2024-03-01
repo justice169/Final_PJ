@@ -6,7 +6,7 @@
     "FP1": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
+      "root": ".",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FP1:build:production"
+              "buildTarget": "FP1:build:production"
             },
             "development": {
-              "browserTarget": "FP1:build:development"
+              "buildTarget": "FP1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FP1:build"
+            "buildTarget": "FP1:build"
           }
         },
         "test": {

@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -10,7 +12,7 @@
   </head>
 
   <body>
-    <h1 class="title">health computer</h1>
+    <h1 class="title">Calculator</h1>
     <div class="main">
       <form class="form">
         <div class="mb-3 row">
@@ -54,6 +56,35 @@
             </select>
           </div>
         </div>
+        <div class="mb-3 row">
+          <label for="healthCondition" class="col-3 col-form-label">Health Condition</label>
+          <div class="col-8">
+            <select id="healthCondition" class="form-select">
+              <option value="none">None</option>
+              <optgroup label="Respiratory Diseases">
+                <option value="asthma">Asthma</option>
+                <option value="chronicObstructivePulmonaryDisease">Chronic Obstructive Pulmonary Disease</option>
+              </optgroup>
+              <optgroup label="Cardiovascular Diseases">
+                <option value="hypertension">Hypertension</option>
+                <option value="heartDisease">Heart Disease</option>
+              </optgroup>
+              <optgroup label="Metabolic Diseases">
+                <option value="diabetes">Diabetes</option>
+                <option value="thyroidDisorders">Thyroid Disorders</option>
+              </optgroup>
+              <optgroup label="Musculoskeletal Diseases">
+                <option value="arthritis">Arthritis</option>
+                <option value="osteoporosis">Osteoporosis</option>
+              </optgroup>
+              <optgroup label="Other Chronic Conditions">
+                <option value="chronicKidneyDisease">Chronic Kidney Disease</option>
+                <!-- Add more options as needed -->
+              </optgroup>
+            </select>
+          </div>
+        </div>
+                
         <div class="text-danger mb-3" id="error"></div>
         <button type="button" class="btn btn-dark" (click)="calculateBMI()">
           Start calculate
@@ -62,7 +93,10 @@
       <div class="result">
         <div class="result_text">
           <p>
-            Body Mass Index(BMI) <span>{{ newBmi }} ({{ newBmiText }})</span>
+            Body Mass Index(BMI) <span>{{ newBmi }} {{ newBmiText }}</span>
+            <!-- <span *ngIf="newBmiText === 'Overweight'">
+              <a href="#" (click)="redirectToAdvicePage()">อ้วนแล้ว ต้องลด BMI</a>
+            </span> -->
           </p>
           <hr />
           <p>
@@ -70,18 +104,10 @@
           </p>
           <hr />
           <p>
-            Total daily caloric expenditure (TDEE) <span>{{ newTdee }}</span>
+            Total Daily Energy Expenditure (TDEE) <span>{{ newTdee }}</span>
           </p>
         </div>
       </div>
     </div>
-    <div id="bcl">
-      <a
-        style="font-size: 8pt; text-decoration: none"
-        href="http://www.devanswer.com"
-        >Free Frontend</a
-      >
-    </div>
   </body>
-  <!-- ใน HTML template -->
 </html>

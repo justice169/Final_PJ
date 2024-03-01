@@ -1,61 +1,100 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+/* Navbar color for health theme */
+.navbar {
+  background-color: #4CAF50 !important; /* เปลี่ยนสีเป็นเขียวเข้ม */
+  padding-top: 20px; /* เพิ่ม Padding บนของ Navbar */
+  padding-bottom: 20px; /* เพิ่ม Padding ล่างของ Navbar */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* เพิ่มเอฟเฟกต์ shadow */
+  position: fixed; /* ทำให้ Navbar ติดอยู่ด้านบนของหน้าจอเสมอ */
+  width: 100%; /* ทำให้ Navbar ขยายตามความกว้างของหน้าจอ */
+  top: 0; /* ให้ Navbar ติดอยู่ด้านบนสุดของหน้า */
+  z-index: 1000; /* ให้ Navbar อยู่ข้างหน้าของเนื้อหา */
+  transition: background-color 0.5s ease, box-shadow 0.5s ease; /* เพิ่มเอฟเฟกต์ transition เมื่อเลื่อนหน้า */
+}
 
+/* Navbar link color */
+.navbar-nav .nav-link {
+  color: #ffffff !important; /* เปลี่ยนสีข้อความลิงก์ใน Navbar เป็นสีขาว */
+}
+
+/* Navbar link color on hover */
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important; /* เปลี่ยนสีข้อความลิงก์ใน Navbar เป็นสีขาว */
+  background-color: rgba(255, 255, 255, 0.2); /* เพิ่มสีพื้นหลังขณะ hover */
+  border-radius: 5px; /* เพิ่มขอบมนให้กับลิงก์ */
+  transition: background-color 0.3s ease;
+}
+
+/* Active navbar link color */
+.navbar-nav .nav-link.active {
+  color: #ffffff !important; /* เปลี่ยนสีข้อความลิงก์ที่ active เป็นสีขาว */
+}
+
+/* Padding below the footer and lighter body text */
 body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: rgb(var(--bs-tertiary-color-rgb));
+  padding-top: 80px; /* ความสูงของ Navbar เพื่อป้องกันเนื้อหาจากการซ้อนทับ */
+  padding-bottom: 3rem;
+  color: #212529; /* เปลี่ยนสีข้อความใน body เป็นสีดำ */
+}
+
+/* Customized carousel */
+.carousel {
+  margin-top: 80px; /* ย้ายขอบบนของ carousel เพื่อไม่ให้ถูกซ้อนทับโดย Navbar */
+  margin-bottom: 4rem;
+  background-color: #f8f9fa; /* เปลี่ยนสีพื้นหลังของ carousel */
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+  color: #000000; /* เปลี่ยนสีข้อความใน carousel caption เป็นสีดำ */
+}
+
+.carousel-item {
+  height: 32rem;
+}
+
+/* Customized marketing content */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+  color: #212529; /* เปลี่ยนสีข้อความใน marketing content เป็นสีดำ */
+}
+
+/* Customized featurettes */
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  letter-spacing: -.05rem;
+  color: #4CAF50; /* เปลี่ยนสีข้อความใน featurette เป็นสีเขียวเข้ม */
+}
+
+/* Responsive CSS */
+@media (min-width: 40em) {
+  .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
   }
-  
-  
-  /* CUSTOMIZE THE CAROUSEL
-  -------------------------------------------------- */
-  
-  /* Carousel base class */
-  .carousel {
-    margin-bottom: 4rem;
-  }
-  /* Since positioning the image, we need to help out the caption */
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  /* Declare heights because of positioning of img element */
-  .carousel-item {
-    height: 32rem;
-  }
-  
-  
-  /* MARKETING CONTENT
-  -------------------------------------------------- */
-  
-  /* Center align the text within the three columns below the carousel */
-  .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  /* rtl:begin:ignore */
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  /* rtl:end:ignore */
-  
-  
-  /* Featurettes
-  ------------------------- */
-  
-  .featurette-divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-  }
-  
-  /* Thin out the marketing headings */
-  /* rtl:begin:remove */
+
   .featurette-heading {
-    letter-spacing: -.05rem;
+      font-size: 50px;
   }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+      margin-top: 7rem;
+  }
+}
+
+
   
   /* rtl:end:remove */
   
@@ -131,6 +170,5 @@ body {
     overflow-x: auto;
     text-align: center;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
   }
   

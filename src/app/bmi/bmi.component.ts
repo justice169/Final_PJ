@@ -80,4 +80,8 @@ export class BMIComponent implements OnInit {
       this.el.nativeElement.querySelector("#error").innerText = errorMsg;
     }
   }
+  // redirectToAdvicePage(): void {
+  //   // เปลี่ยนเส้นทางไปยังหน้าที่ต้องการ (ตัวอย่างเช่น '/advice')
+  //   this.router.navigate(['/advice']);
+  // }
 }
