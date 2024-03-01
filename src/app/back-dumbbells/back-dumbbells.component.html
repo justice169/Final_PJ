@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest-dumb</title>
+    <link rel="stylesheet" href="back-dumbbells.component.css"> 
+</head>
+<body>
+    <div class="exercise-container">
+        <div class="exercise-header">
+            <h1>Exercises for Back with Dumbbells</h1>
+            <p>For more exercises and fitness tools, visit <a href="https://www.lovefit-tools.com/">LoveFit Tools</a>.</p>
+        </div>
+        <div class="exercise-list">
+            <div class="exercise-item" *ngFor="let exercise of exercises">
+                <img [src]="exercise.image" alt="{{ exercise.title }}">
+                <div class="exercise-details">
+                    <h3>{{ exercise.title }}</h3>
+                    <p>{{ exercise.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

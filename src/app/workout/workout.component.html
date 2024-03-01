@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout</title>
+</head>
+<body>
+    <div class="workout-container">
+        <img src="../../assets/pic/1000_F_256496979_6o6vdeKKqIWUjIBS3qwsGBbKt51FVOCR.jpg" alt="Body Image">
+        <div class="workout-info chest">
+            <button class="btn btn-primary chest-btn" (click)="startChestWorkout()">Start Chest Workout
+            </button>
+        </div>
+        <div class="workout-info abdomen">
+            <button class="btn btn-primary abdomen-btn" (click)="startAbdomenWorkout()">Start Abdomen Workout</button>
+        </div>
+        <div class="workout-info back">
+            <button class="btn btn-primary back-btn" (click)="startBackWorkout()">Start Back Workout</button>
+        </div>        
+        <div class="menu">
+            <h3>Filter</h3>
+            <div class="filter">
+                <select [(ngModel)]="selectedGender" aria-label="Select gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>              
+            </div>
+            <div class="filter">
+                <select [(ngModel)]="selectedEquipment" aria-label="Select equipment">
+                    <option value="dumbbells">Dumbbells</option>
+                    <option value="bodyweight">Bodyweight</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
