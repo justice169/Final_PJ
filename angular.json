@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/fp1",
-            "index": "src/index.html",
+            "index": "src/app/home/home.component.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
