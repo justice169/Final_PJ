@@ -23,7 +23,7 @@ import { FatComponent } from './fat/fat.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full' },
-  {path: '', component : HomeComponent},
+  {path: 'Home', component : HomeComponent},
   {path: 'BMI', component : BMIComponent},
   {path: 'Art', component : ArticleMainComponent},
   {path: 'Nut', component : NutritionComponent},
