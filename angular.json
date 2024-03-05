@@ -23,7 +23,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/pic",
               "src/assets/vendor",
               {
                 "glob": "**/*",
