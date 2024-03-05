@@ -22,8 +22,8 @@ import { ThinComponent } from './thin/thin.component';
 import { FatComponent } from './fat/fat.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/Home', pathMatch: 'full' },
-  {path: 'Home', component : HomeComponent},
+
+  {path: '', component : HomeComponent},
   {path: 'BMI', component : BMIComponent},
   {path: 'Art', component : ArticleMainComponent},
   {path: 'Nut', component : NutritionComponent},
