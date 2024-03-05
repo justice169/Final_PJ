@@ -18,6 +18,8 @@ import { AbdomenBodyweightComponent } from './abdomen-bodyweight/abdomen-bodywei
 import { AbdomenDumbbellsComponent } from './abdomen-dumbbells/abdomen-dumbbells.component';
 import { BackDumbbellsComponent } from './back-dumbbells/back-dumbbells.component';
 import { BackBodyweightComponent } from './back-bodyweight/back-bodyweight.component';
+import { ThinComponent } from './thin/thin.component';
+import { FatComponent } from './fat/fat.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -37,7 +39,8 @@ const routes: Routes = [
   {path: 'Abody', component : AbdomenBodyweightComponent},
   {path: 'Adumb', component : AbdomenDumbbellsComponent},
   {path: 'Bbody', component : BackBodyweightComponent},
-  {path: 'Bdumb', component : BackDumbbellsComponent}
+  {path: 'Thin', component : ThinComponent},
+  {path: 'Fat', component : FatComponent},
 ];
 
 @NgModule({

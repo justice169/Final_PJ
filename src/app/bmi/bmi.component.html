@@ -16,69 +16,67 @@
     <div class="main">
       <form class="form">
         <div class="mb-3 row">
-          <label for="gender" class="col-3 col-form-label">Gender</label>
+          <label for="gender" class="col-3 col-form-label">เพศ</label>
           <div class="col-8">
             <select id="gender" class="form-select">
-              <option value="1">male</option>
-              <option value="2">female</option>
+              <option value="1">ชาย</option>
+              <option value="2">หญิง</option>
             </select>
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="age" class="col-3 col-form-label">Age</label>
+          <label for="age" class="col-3 col-form-label">อายุ</label>
           <div class="col-8">
             <input type="number" class="form-control" id="age" />
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="height" class="col-3 col-form-label">Height</label>
+          <label for="height" class="col-3 col-form-label">ส่วนสูง (เซ็นติเมตร)</label>
           <div class="col-8">
             <input type="number" class="form-control" id="height" />
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="weight" class="col-3 col-form-label">Weight</label>
+          <label for="weight" class="col-3 col-form-label">น้ำหนัก (กิโลกรัม)</label>
           <div class="col-8">
             <input type="number" class="form-control" id="weight" />
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="active" class="col-3 col-form-label"
-            >Activity Level</label
-          >
+          <label for="active" class="col-3 col-form-label">กิจกรรมทางกาย</label>
           <div class="col-8">
             <select id="active" class="form-select">
-              <option value="1.2">no exercise</option>
-              <option value="1.375">exercise 1-3 days a week</option>
-              <option value="1.55">exercise 4-5 days a week</option>
-              <option value="1.725">exercise 6-7 days a week</option>
-              <option value="1.9">in motion all the time</option>
+              <option value="1.2">ไม่ออกกำลังกาย</option>
+              <option value="1.375">ออกกำลังกาย 1-3 วันต่อสัปดาห์</option>
+              <option value="1.55">ออกกำลังกาย 4-5 วันต่อสัปดาห์</option>
+              <option value="1.725">ออกกำลังกาย 6-7 วันต่อสัปดาห์</option>
+              <option value="1.9">นักกีฬา</option>
             </select>
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="healthCondition" class="col-3 col-form-label">Health Condition</label>
+          <label for="healthCondition" class="col-3 col-form-label">โรคประจำตัว</label>
           <div class="col-8">
             <select id="healthCondition" class="form-select">
-              <option value="none">None</option>
-              <optgroup label="Respiratory Diseases">
-                <option value="asthma">Asthma</option>
-                <option value="chronicObstructivePulmonaryDisease">Chronic Obstructive Pulmonary Disease</option>
+              <option value="none">ไม่มี</option>
+              <optgroup label="กลุ่มโรคระบบทางเดินหายใจ">
+                <option value="asthma">หอบหืด</option>
+                <option value="chronicObstructivePulmonaryDisease">โรคปอดอุดกั้นเรื้อรัง</option>
               </optgroup>
-              <optgroup label="Cardiovascular Diseases">
-                <option value="hypertension">Hypertension</option>
-                <option value="heartDisease">Heart Disease</option>
+              <optgroup label="กลุ่มโรคหัวใจและหลอดเลือด">
+                <option value="hypertension">โรคความดันโลหิตสูง</option>
+                <option value="heartDisease">โรคหัวใจ</option>
               </optgroup>
-              <optgroup label="Metabolic Diseases">
-                <option value="diabetes">Diabetes</option>
-                <option value="thyroidDisorders">Thyroid Disorders</option>
+              <optgroup label="กลุ่มโรคไขมันส่วนเกินสูง">
+                <option value="diabetes">โรคเบาหวาน</option>
+                <option value="thyroidDisorders">โรคต่อมไทรอยด์</option>
               </optgroup>
-              <optgroup label="Musculoskeletal Diseases">
-                <option value="arthritis">Arthritis</option>
-                <option value="osteoporosis">Osteoporosis</option>
+              <optgroup label="กลุ่มโรคเกี่ยวกับกระดูกและกล้ามเนื้อ">
+                <option value="arthritis">โรคข้อเสื่อม</option>
+                <option value="osteoporosis">โรคกระดูกพรุน</option>
               </optgroup>
-              <optgroup label="Other Chronic Conditions">
-                <option value="chronicKidneyDisease">Chronic Kidney Disease</option>
+              <optgroup label="กลุ่มโรคภาวะเรื้อรังอื่นๆ">
+                <option value="chronicKidneyDisease">โรคไตเรื้อรัง</option>
                 <!-- Add more options as needed -->
               </optgroup>
             </select>
@@ -93,18 +91,32 @@
       <div class="result">
         <div class="result_text">
           <p>
-            Body Mass Index(BMI) <span>{{ newBmi }} {{ newBmiText }}</span>
-            <!-- <span *ngIf="newBmiText === 'Overweight'">
-              <a href="#" (click)="redirectToAdvicePage()">อ้วนแล้ว ต้องลด BMI</a>
-            </span> -->
+            ดัชนีมวลกาย (BMI) <span>{{ newBmi }} {{ newBmiText }}</span>
+            <span *ngIf="newBmiText === 'โรคอ้วนระยะสุดท้าย'">
+                <a [routerLink]="['/Fat']"> อ้วนมากแล้วต้องลด BMI</a>
+            </span>
+            <span *ngIf="newBmiText === 'โรคอ้วนระยะสอง'">
+              <a [routerLink]="['/Fat']"> อ้วนมากแล้วต้องลด BMI</a>
+          </span>
+          <span *ngIf="newBmiText === 'โรคอ้วน'">
+            <a [routerLink]="['/Fat']"> อ้วนมากแล้วต้องลด BMI</a>
+        </span>
+        <span *ngIf="newBmiText === 'น้ำหนักเกิน'">
+          <a [routerLink]="['/Fat']"> อ้วนมากแล้วต้องลด BMI</a>
+      </span>
+      <span *ngIf="newBmiText === 'ผอมเกินไป'">
+        <a [routerLink]="['/Thin']"> ผอมเกินต้องเพิ่ม BMI</a>
+    </span>
+        </p>        
+          <hr />
+          <p>
+            อัตราการเผาผลาญพลังงานในแต่ละวัน (BMR) <span>{{ newBmr }}</span>
+            แคลอรี่
           </p>
           <hr />
           <p>
-            Basal Metabolic Rate (BMR) <span>{{ newBmr }}</span>
-          </p>
-          <hr />
-          <p>
-            Total Daily Energy Expenditure (TDEE) <span>{{ newTdee }}</span>
+            อัตราการเผาผลาญพลังงานทั้งหมดต่อวัน (TDEE) <span>{{ newTdee }}</span>
+            แคลอรี่
           </p>
         </div>
       </div>

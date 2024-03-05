@@ -14,6 +14,20 @@ body {
   background-color: #f0f0f0; /* Soft gray background */
 }
 
+a {
+  color: #fff; /* White color */
+  background-color: #4CAF50; /* Green background */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+
+/* Hover effect for the link */
+a:hover {
+  background-color: #45a049; /* Darker green background on hover */
+}
+
 /* Style the title */
 .title {
   text-align: center;
@@ -104,3 +118,21 @@ body {
 .form:hover::before, .result:hover::before {
   opacity: 1;
 }
+
+/* Additional styles to adjust link position */
+.result_text a {
+  display: inline-block; /* Make the link an inline-block element */
+  margin-left: 10px; /* Add left margin to separate from the text */
+  padding: 5px 10px; /* Add padding to the link */
+  background-color: #4CAF50; /* Green background */
+  color: #fff; /* White color */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+/* Hover effect for the link */
+.result_text a:hover {
+  background-color: #45a049; /* Darker green background on hover */
+}
+

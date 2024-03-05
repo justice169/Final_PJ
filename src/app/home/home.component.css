@@ -1,5 +1,6 @@
 body {
-  color: #212529; /* กำหนดสีข้อความให้ดำ */
+  color: #212529;
+  /* กำหนดสีข้อความให้ดำ */
 }
 
 /* CUSTOMIZE THE CAROUSEL */
@@ -8,59 +9,72 @@ body {
 }
 
 .carousel-caption {
-  bottom: 2rem; /* ลดระยะห่างของ caption ลงเล็กน้อย */
+  bottom: 2rem;
+  /* ลดระยะห่างของ caption ลงเล็กน้อย */
   z-index: 10;
 }
 
 .carousel-item {
-  height: 400px; /* เพิ่มความสูงของ carousel item */
+  height: 400px;
+  /* เพิ่มความสูงของ carousel item */
 }
 
 /* จัดให้รูปภาพอยู่ด้านซ้ายของสไลด์ */
 .carousel-item img {
-width: auto; /* ให้ความกว้างของรูปภาพปรับตามขนาดต่าง ๆ */
-height: 100%; /* ให้ความสูงของรูปภาพเป็น 100% ของพื้นที่ใน Carousel */
-object-fit: contain; /* จัดการให้ภาพปรับขนาดเพื่อแสดงอยู่ในกรอบและไม่ตัดส่วนของเนื้อหา */
-float: left; /* จัดให้รูปภาพอยู่ด้านซ้าย */
-background-color: #edeef0;
+  width: auto;
+  /* ให้ความกว้างของรูปภาพปรับตามขนาดต่าง ๆ */
+  height: 100%;
+  /* ให้ความสูงของรูปภาพเป็น 100% ของพื้นที่ใน Carousel */
+  object-fit: contain;
+  /* จัดการให้ภาพปรับขนาดเพื่อแสดงอยู่ในกรอบและไม่ตัดส่วนของเนื้อหา */
+  float: left;
+  /* จัดให้รูปภาพอยู่ด้านซ้าย */
+  background-color: #edeef0;
 }
 
 
 /* MARKETING CONTENT */
 .marketing .col-lg-4 {
-  margin-bottom: 2rem; /* ลดระยะห่างของ col-lg-4 */
+  margin-bottom: 2rem;
+  /* ลดระยะห่างของ col-lg-4 */
   text-align: center;
 }
 
 .marketing .col-lg-4 p {
-  margin-right: 1rem; /* เพิ่มระยะห่างของข้อความ marketing content */
+  margin-right: 1rem;
+  /* เพิ่มระยะห่างของข้อความ marketing content */
   margin-left: 1rem;
 }
 
 /* Featurettes */
 .featurette-divider {
-  margin: 3rem 0; /* ลดระยะห่างของ featurette divider */
+  margin: 3rem 0;
+  /* ลดระยะห่างของ featurette divider */
 }
 
 .featurette-heading {
-  font-size: 2rem; /* เพิ่มขนาดตัวหนังสือของ featurette heading */
+  font-size: 2rem;
+  /* เพิ่มขนาดตัวหนังสือของ featurette heading */
 }
 
 /* RESPONSIVE CSS */
 @media (min-width: 40em) {
   .carousel-caption p {
-      font-size: 1.25rem; /* ปรับขนาดตัวหนังสือใน carousel caption */
-      line-height: 1.5;
+    font-size: 1.25rem;
+    /* ปรับขนาดตัวหนังสือใน carousel caption */
+    line-height: 1.5;
   }
 
   .featurette-heading {
-      font-size: 2.5rem; /* ปรับขนาดตัวหนังสือของ featurette heading */
+    font-size: 2.5rem;
+    /* ปรับขนาดตัวหนังสือของ featurette heading */
   }
 }
 
 @media (min-width: 62em) {
   .featurette-heading {
-      margin-top: 5rem; /* ปรับระยะห่างด้านบนของ featurette heading */
+    margin-top: 5rem;
+    /* ปรับระยะห่างด้านบนของ featurette heading */
   }
 }
 
@@ -111,10 +125,12 @@ background-color: #edeef0;
   flex-wrap: nowrap;
   padding-bottom: 1rem;
   margin-top: -1px;
-  overflow-x: auto; /* เพิ่มบรรทัดนี้ */
+  overflow-x: auto;
+  /* เพิ่มบรรทัดนี้ */
   text-align: center;
   white-space: nowrap;
-  /* -webkit-overflow-scrolling: touch; */ /* ลบบรรทัดนี้ */
+  /* -webkit-overflow-scrolling: touch; */
+  /* ลบบรรทัดนี้ */
 }
 
 
@@ -124,99 +140,113 @@ background-color: #edeef0;
 
 html,
 .card-body {
--moz-box-sizing: border-box;
-     box-sizing: border-box;
-height: 100%;
-width: 100%; 
-background: #FFF;
-font-family: 'Roboto', sans-serif;
-font-weight: 400;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 .wrapper {
-display: table;
-height: 100%;
-width: 100%;
+  display: table;
+  height: 100%;
+  width: 100%;
 }
 
 .container-fostrap {
-display: table-cell;
-padding: 1em;
-text-align: center;
-vertical-align: middle;
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
 }
+
 .fostrap-logo {
-width: 100px;
-margin-bottom:15px
+  width: 100px;
+  margin-bottom: 15px
 }
+
 h1.heading {
-color: #fff;
-font-size: 1.15em;
-font-weight: 900;
-margin: 0 0 0.5em;
-color: #505050;
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+  color: #505050;
 }
+
 @media (min-width: 450px) {
-h1.heading {
-  font-size: 3.55em;
+  h1.heading {
+    font-size: 3.55em;
+  }
 }
-}
+
 @media (min-width: 760px) {
-h1.heading {
-  font-size: 3.05em;
+  h1.heading {
+    font-size: 3.05em;
+  }
 }
-}
+
 @media (min-width: 900px) {
-h1.heading {
-  font-size: 3.25em;
-  margin: 0 0 0.3em;
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
 }
-} 
+
 .card {
-display: block; 
+  display: block;
   margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
-  transition: box-shadow .25s; 
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow .25s;
 }
+
 .card:hover {
-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .img-card {
-width: 100%;
-height:200px;
-border-top-left-radius:2px;
-border-top-right-radius:2px;
-display:block;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  display: block;
   overflow: hidden;
 }
-.img-card img{
-width: 100%;
-height: 100%;
-object-fit:cover; 
-transition: all .25s ease;
-} 
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .25s ease;
+}
+
 .card-content {
-padding:15px;
-text-align:left;
+  padding: 15px;
+  text-align: left;
 }
+
 .card-title {
-margin-top:0px;
-font-weight: 700;
-font-size: 1.65em;
+  margin-top: 0px;
+  font-weight: 700;
+  font-size: 1.65em;
 }
+
 .card-title a {
-color: #000;
-text-decoration: none !important;
+  color: #000;
+  text-decoration: none !important;
 }
+
 .card-read-more {
-border-top: 1px solid #D4D4D4;
+  border-top: 1px solid #D4D4D4;
 }
+
 .card-read-more a {
-text-decoration: none !important;
-padding:10px;
-font-weight:600;
-text-transform: uppercase
+  text-decoration: none !important;
+  padding: 10px;
+  font-weight: 600;
+  text-transform: uppercase
 }
